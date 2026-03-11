@@ -89,12 +89,30 @@ else
 }
 
 // Parašykite programą, kuri išvestų į ekraną kiek minučių praėjo nuo vidurnakčio. Vartotojas įveda valandas ir minutės.
+// Taip pat jei vartotojas įveda ne skaičių, programa išvestų klaidą.
+
+// Console.Write("Enter hours:");
+// var hours = int.TryParse(Console.ReadLine());
+
+// Console.Write("Enter minutes: ");
+// var minutes = int.TryParse(Console.ReadLine());
+
+// var totalMinutes = hours * 60 + minutes;
+// Console.WriteLine($"Total minutes since midnight is: {totalMinutes}");
 
 Console.Write("Enter hours:");
-var hours = int.Parse(Console.ReadLine());
+    if (!int.TryParse(Console.ReadLine(), out var hours))
+{
+    Console.WriteLine("Warning: Invalid input. Please enter a number.");
+    return;
+}
 
 Console.Write("Enter minutes: ");
-var minutes = int.Parse(Console.ReadLine());
+    if (!int.TryParse(Console.ReadLine(), out var minutes))
+{
+    Console.WriteLine("Warning: Invalid input. Please enter a number.");
+    return;
+}
 
 var totalMinutes = hours * 60 + minutes;
 Console.WriteLine($"Total minutes since midnight is: {totalMinutes}");
