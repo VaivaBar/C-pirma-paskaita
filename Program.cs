@@ -1,9 +1,14 @@
 ﻿// See https://aka.ms/new-console-template for more information
 
+// PIRMA PASKAITA
+
+
 // Parašykite programą, kuri išvestų į ekraną, ar skaičius a yra didesnis už b
 
 using System.Numerics;
 using System.Runtime.InteropServices.Marshalling;
+using System.Security.AccessControl;
+using Microsoft.VisualBasic;
 
 var a = 3;
 var b = 2;
